@@ -1,2 +1,2 @@
 # r-init
-Initialize your github repo in your terminal
+A CLI to initialize your github repos directly in your terminal
