@@ -5,10 +5,12 @@ const figlet = require('figlet')
 // utility package import
 const files = require('./lib/files')
 const inquirer = require('./lib/inquirer')
+const github = require('./lib/github')
 
 
 const Configstore = require('configstore')
 const conf = new Configstore('r-init')
+
 
 
 // Styles for the blank console
@@ -26,8 +28,11 @@ if (files.directoryExists('.git')) {
 }
 
 const run = async () => {
-  const credidentials = await inquirer.askGithubCredidentials()
-  console.log(credidentials)
+  let token = github.getStoredGithubToken()
+  if (!token) {
+    await github.setGithubCredidentials();
+    token = await github.registerNewToken()
+  }
+  console.log(token)
 }
-
 run()
