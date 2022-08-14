@@ -29,50 +29,50 @@ if (files.directoryExists('.git')) {
   process.exit();
 }
 
-const run = async () => {
-  try {
-    // Retrieve and Set Authentication Token
-    const token = await getGithubToken();
-    github.githubAuth(token)
-
-    // Create .gitignore file
-    await repo.createGitignore()
-
-    // Set up local repository and push to remote
-    const done = await repo.setupRepo(url)
-    if(done) {
-      console.log(chalk.green('All done'));
-    }
-
-  } catch(err) {
-    if (err) {
-      switch (err.code) {
-        case 401:
-          console.log(chalk.red('Couldn\'t log you in. Please provide correct credidentials/token.'))
-          break
-        case 422:
-          console.log(chalk.red('There already exists a remote repository with the same name'))
-          break
-        default:
-          console.log(err)
-      }
-    }
-  }
-  
-}
-run()
-
 const getGithubToken = async () => {
   // Fetch token from config store
   let token = github.getStoredGithubToken();
-  if (token) {
-    return token
+  if(token) {
+    return token;
   }
 
-  // No token found use credidential to access github access
-  await github.setGithubCredidentials();
+  // No token found, use credentials to access GitHub account
+  token = await github.getPersonalAccesToken();
 
-  // register new token
-  token = await github.registerNewToken()
-  return token
+  return token;
+};
+
+const run = async () => {
+  try {
+    // Retrieve & Set Authentication Token
+    const token = await getGithubToken();
+    github.githubAuth(token);
+
+    // Create remote repository
+    const url = await repo.createRemoteRepo();
+
+    // Create .gitignore file
+    await repo.createGitignore();
+
+    // Set up local repository and push to remote
+    await repo.setupRepo(url);
+
+    console.log(chalk.green('All done!'));
+  } catch(err) {
+      if (err) {
+        switch (err.status) {
+          case 401:
+            console.log(chalk.red('Couldn\'t log you in. Please provide correct credentials/token.'));
+            break;
+          case 422:
+            console.log(chalk.red('There is already a remote repository or token with the same name'));
+            break;
+          default:
+            console.log(chalk.red(err));
+        }
+      }
+  }
 }
+run()
+
+
