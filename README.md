@@ -57,5 +57,5 @@ I started this project because i always had to move out from my workspace when I
 
 
 ## 🤝 Contributing
-If you will like to contribute to this project, simply follow the steps in the contribution guide or reach out to me on twitter @xasterKies if you need any direction.   [CONTRIBUTING.md](https://github.com/eddybruv/WakaLie/blob/main/CONTRIBUTING.md)
+If you will like to contribute to this project, simply follow the steps in the contribution guide or reach out to me on twitter @xasterKies if you need any direction.   
 
