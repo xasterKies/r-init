@@ -1,6 +1,6 @@
 # R-init
 
-> Initialize your github reposiotries from your terminal.
+> A CLI that helps you initialize your github reposiotries from your terminal.
 
 ![Alt text](./r-init.png "R-init CLI")
 
