@@ -4,22 +4,24 @@
 
 ![Alt text](./r-init.png "R-init CLI")
 
-I started this project because i always had to move out from my workspace when I wanted to create or initialize new repositories to work on and that always made me loose some focus along the way. In an attempt of being productive i started coding this simple tool.
+## Why?
 
-![most languege](https://img.shields.io/github/languages/top/xasterKies/r-init?color=green&style=for-the-badge)
+I started this project because I always had to move out from my workspace when I wanted to create or initialize new repositories to work on and that always made me loose some focus along the way. In an attempt of being productive i started coding this simple tool.
+
+![most language](https://img.shields.io/github/languages/top/xasterKies/r-init?color=green&style=for-the-badge)
 ![stars](https://img.shields.io/github/stars/xasterKies/r-init?color=green&style=for-the-badge)
 ![Contributors](https://img.shields.io/github/contributors/xasterKies/r-init?color=green&style=for-the-badge)
 
 
 
 
-## ⚡ Prerequisites
+## Prerequisites
 
 - Node and npm
   - Install using this tutorial for [linux/mac](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [windows](https://phoenixnap.com/kb/install-node-js-npm-on-windows)
 
 
-## 🔧 Setting up the Project
+## Setting up the Project
 
 1. Fork repository
 
@@ -41,7 +43,7 @@ I started this project because i always had to move out from my workspace when I
    git init
    ```
 
-## ⚙️ Running the project
+## Running the project
 
 1. Install dependencies
 
@@ -56,6 +58,6 @@ I started this project because i always had to move out from my workspace when I
    ```
 
 
-## 🤝 Contributing
+## Contributing
 If you will like to contribute to this project, simply follow the steps in the contribution guide or reach out to me on twitter @xasterKies if you need any direction.   
 
