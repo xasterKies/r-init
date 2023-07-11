@@ -1,4 +1,4 @@
-# R-init
+# ⚙️ r-init
 
 > A CLI that helps you initialize your github reposiotries from your terminal.
 
@@ -59,5 +59,5 @@ I started this project because I always had to move out from my workspace when I
 
 
 ## Contributing
-If you will like to contribute to this project, simply follow the steps in the contribution guide or reach out to me on twitter @xasterKies if you need any direction.   
+if you will like to make a contribution or suggest anything to the project, will be happy to hear from you in issues or PRs section :)   
 
